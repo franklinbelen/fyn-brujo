@@ -1,0 +1,510 @@
+/* 
+Theme Name: FyN Brujo
+Theme URI: https://franklinbelen.com/themes/fyn-brujo
+Author: Franklin Belen Ricse
+Author URI: https://franklinbelen.com
+Description: 
+Version: 1.0.0
+License: GNU General Public v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+text Domain: fyn-brujo
+*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+}
+p{
+  margin: 0
+}
+
+
+/*================================
+Tipografia
+==================================*/
+p,
+label,
+input,
+a,
+small{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Fjalla One', sans-serif;
+}
+.ButtonPrincipal{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+
+
+:root{
+  --height-header: ;
+  
+  --color-principal: rgba(0,0,0,.8);
+  --color-secundario: #3B658F;
+  
+  --monocromatico-one: #F28927;
+  --monocromatico-two: #F27222;
+  --monocromatico-three: #D9372B;
+  
+  --color-blanco: #fff;
+  --color-negro: #000;
+  --color-negro-transparente: rgba(0,0,0,.6);
+}
+
+.Header{
+  background-color: #000;
+  padding: .250rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 75px;
+}
+/* Contenedor Botón para Moviles
+===============================================*/
+.Logo a img{
+  margin: auto;
+/*   height: 200px; */
+}
+/* Contenedor Botón para Moviles
+===============================================*/
+.BtnMenu{
+  cursor: pointer;
+  position: fixed;
+  bottom: 5vh;
+  right: 8vw;
+  z-index: 2;
+  background-color: var(--color-blanco);
+  padding: .8rem;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px 2px #000;
+}
+.BtnMenu span{
+  display: block;
+  background-color: var(--color-principal);
+  width: 30px;
+  height: 6px;
+  margin: 4px 0;
+}
+
+/*==============================================
+  Contenedor Principal del Menu [nav]
+===============================================*/
+.Menu{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-principal);
+  opacity: .9;
+  height: 100vh;
+  width: 100vw;
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease-in-out;
+  z-index: 1;
+}
+.MenuNavegacion{
+  margin: 0 5vw 18vh;
+  background-color: var(--color-negro);
+  padding: 1rem;
+  border-radius: 15px;
+  transform: translateX(150%);
+  transition: transform .3s ease-in-out .3s;
+}
+.menu-item,
+.page_item /* lista de página */{
+  transition: border .2s linear;
+  background-color: var(--color-negro);
+}
+
+.menu-item a,
+.page_item a /* lista de página */{
+  color: var(--color-blanco);
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  text-transform: uppercase;
+  padding: .8rem 1rem;
+}
+
+.menu-item a:hover{
+  background: #FF0001;
+  color: #FFCE00;
+}
+
+ /* Estilos aplicados al presionar el botón
+ --------------------------------------------*/
+.view{
+  transform: scale(1);
+}
+.view .MenuNavegacion{
+  transform: translateX(0);
+}
+
+
+
+/* ========================
+  Slider Automatico
+======================== */
+.SliderAutomatico {
+	width: 100%;
+	margin: 75px auto 0;
+	overflow: hidden;
+}
+
+.SliderAutomatico ul {
+	display: flex;
+	padding: 0;
+	width: 200%;
+	
+	animation: cambio 8s infinite alternate linear;
+}
+
+.SliderAutomatico li {
+	width: 100%;
+  list-style: none;
+  animation: cambioli 8s infinite alternate linear;
+}
+
+.SliderAutomatico img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	45% {margin-left: 0;}
+	
+	50% {margin-left: -100%;}
+	100% {margin-left: -100%;}
+}
+@keyframes cambioli {
+	0% {opacity:1;}
+  45% {opacity: .6;}
+  
+	50% {opacity:1;}
+	100% {opacity: .6;}
+}
+
+
+
+/* ========================
+  Slider Automatico
+======================== */
+.MainTickerNegro{
+  background-color: #000;
+  padding: 1.5rem;
+}
+.MainTickerNegro > *{
+  text-align: center;
+  color: #fff;
+}
+.TickerNegroTextEmail{
+  color: red;
+}
+.TickerNegroLink{
+  color: #FFD600;
+}
+
+/*  */
+.MainServicio{
+  background-size: 150px auto;
+}
+.MainServicio > div{   
+  padding: 2rem 0;
+}
+
+.ServicioOne,
+.ServicioTwo,
+.ServicioThree{
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80%;
+  margin: 2rem auto;
+}
+.ServicioOne:hover,
+.ServicioTwo:hover,
+.ServicioThree:hover {
+  transition: all .5s ease-in-out;
+  box-shadow: 0px 0px 0px 5px #FFD600;
+  transform: rotate(360deg);
+  border-radius: 50%;
+}
+
+/*  */
+.MainBrujoDescription{
+  padding: 2rem;
+  background-size: cover;
+  text-align: center;
+  background-position: bottom;
+}
+.BrujoDescriptionTitle{
+  color: #F6FF00;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.BrujoDescription{
+  font-size: 1.2rem;
+  color: #FFC000;
+}
+.BrujoDescriptionLink{
+  margin: 1rem 0;
+  display: block;
+}
+
+
+
+/*  */
+.MainTrabajos{
+  background-color: #000;
+  padding: 2rem 0;
+}
+
+.TrabajosTitle{
+  text-align: center;
+  font-size: 2.5rem;
+  color: red;
+  margin: 1rem;
+}
+.TrabajosTitulo{
+  color: #FFDD00;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.TrabajosOne,
+.TrabajosTwo,
+.TrabajosThree{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.TrabajosOne > *,
+.TrabajosTwo > *,
+.TrabajosThree > *{
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 0 4rem;
+}
+.TrabajosImg{
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  transition: transform .5s linear;
+  border: 5px solid transparent;
+}
+.TrabajosImg:hover{
+  border: 5px solid #FFDD00;
+  border-radius: 50%;
+  transform: scale(1.6);
+}
+.TrabajosText{
+  color: #fff;
+  text-align: justify;
+  padding: 0 1rem;
+}
+
+/*  */
+.MainMetodosPago{
+  padding: 3rem ;
+}
+.MetodosPagoText{
+  color: #fff;
+  text-shadow: 2px 2px 1px #000, 2px 2px 1px #000;
+  font-size: 1rem;
+}
+
+
+
+/*--------------------*/
+/* Pages */
+/*--------------------*/
+/* page amarres */
+.MainSeccionTwoAmarresAmor{
+  padding: 2rem 0;
+}
+.MainSeccionTwoAmarresAmor > *{
+  width: 80%;
+  margin: auto;
+}
+.SeccionTwoAmarresAmorInfo{
+  text-align: center;
+}
+.SeccionTwoAmarresAmorTitle{
+  color: #FFFC00;
+  font-size: 2rem;
+}
+.SeccionTwoAmarresAmorText{
+  color: #fff;
+  font-size: 1.2rem;
+}
+.SeccionTwoAmarresAmorTextContactame{
+  color: red;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+}
+
+/* page politicas */
+.CapaSeccionTwoPoliticas{
+  padding: 2rem 0;
+  width: 80%;
+  margin: auto;
+}
+.SeccionTwoPoliticasTitle{
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+}
+.SeccionTwoPoliticasText{
+  color: #fff;
+  font-size: 1rem;
+  margin: .5rem;
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+  
+  .Header{
+    display: flex;
+    justify-content: space-around;
+  }
+  .Logo{
+    width: 25%;
+  }
+  .BtnMenu{
+    display: none;
+  }
+  .Menu{
+    position: relative;
+    
+    background-color: initial;
+    height: auto;
+    width: 60%;
+    transform: scaleX(1);
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+  }
+  .MenuNavegacion{
+    margin: initial;
+    background-color: initial;
+    padding: initial;
+    border-radius: initial;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    transform: initial;
+  }
+  
+  
+  .ListItem a{
+    padding: initial;
+  }
+  
+}
+
+@media screen and (min-width: 980px){
+  .MainBannerNegro{
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .BannerOne{
+    align-self: center;
+  }
+
+
+  /*  */
+  .MainTickerNegro{
+    padding: 2rem 0;
+  }
+  .MainTickerNegro > *{
+    font-size: 1.5rem;
+  }
+
+  /*  */
+  .MainServicio > div,
+  .TrabajosCapa,
+  .MetodosPagoCapa,
+  .CapaSeccionTwoAmarresAmor{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .MainServicio > div,
+  .TrabajosCapa{
+    display: flex;
+    justify-content: space-around;
+  }
+  .MainServicio > div > *,
+  .TrabajosCapa > *{
+    width: 28%;
+  }
+
+  /*  */
+  .MainBrujoDescription{
+    padding: 4rem;
+  }
+  .BrujoDescriptionTitle{
+    color: #F6FF00;
+  }
+  .BrujoDescription{
+    font-size: 1.8rem;
+    width: 80%;
+    margin: auto;
+  }
+  .BrujoDescriptionLink{
+    margin: 2rem 0;
+  }
+
+  /* page amarres */
+  .CapaSeccionTwoAmarresAmor{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .SeccionTwoAmarresAmorImg{
+    width: 30%
+  }
+  .SeccionTwoAmarresAmorInfo{
+    width: 60%;
+  }
+  /* page politicas */
+  .CapaSeccionTwoPoliticas{
+    padding: 2rem 0;
+    width: 60%;
+    margin: auto;
+  }
+
+}
+
